@@ -238,7 +238,7 @@ public struct TextureInfo {
                                    length: Int(mWidth))
             imageDataProvider = CGDataProvider(data: imageData)
             let format = tupleOfInt8sToString(aiTexture.achFormatHint)
-            if format == "png" {
+            if format.substring(to: 3) == "png" {
                 print("Created png embedded texture")
                 image = CGImage(pngDataProviderSource: imageDataProvider!,
                                 decode: nil,
